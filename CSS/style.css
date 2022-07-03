@@ -1,0 +1,594 @@
+@charset "UTF-8";
+
+html{
+   font-size:100%;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Raleway','Raleway 900''Raleway Bold', sans-serif;
+    font-size: 15px;
+    max-width: 767px;
+}
+
+p{
+    text-decoration: none;
+    color:#000;
+}
+
+a{
+    text-decoration: none;
+    color:#000;
+ }
+
+/* HEADER */
+
+header {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.area_logo {
+    text-align: center;
+}
+
+.area_logo img {
+    width: 100px;
+    height: 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    /* ロゴが横に伸びている？？ */
+}
+
+header ul {
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+
+header ul li {
+    width: 50%;
+    list-style: none;
+    padding-bottom:20px;
+    text-align: center;
+    border-bottom: 2px solid #F2F2F2;
+    display: block;
+}
+
+header ul li:hover, header ul li:focus {
+   border-bottom: 3px solid #0065FC;
+   padding-bottom:20px;
+}
+
+.list_navi a:hover {
+    color: #0065FC;
+}
+
+.version_pc {
+    display: none;
+}
+
+/* SEARCH SECTION */
+
+.search {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.search_title {
+    padding:30px 20px;
+}
+
+.search_title h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.search_title p {}
+
+/* SEARCH BUTTON */
+
+.search_button{
+    display: flex;
+    height: 90px;
+    width: 100%;
+
+    padding-left: 30px;
+}
+
+.button_gray {
+    height:50px;
+    width:50px;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#F2F2F2;
+    border-radius:15px 0 0 15px;
+    border: none;
+}
+
+.search_button input[type=text] {
+    height:44px;
+    width:250px;
+    position:relative;
+    left: 50px;
+    border: 2px solid #F2F2F2;
+    background:#fff;
+    font: #000000;
+    font-family: 'Raleway Black 900';
+    font-size: large;
+    font-weight: bolder;
+}
+
+.button_rechercher{
+    display:none;
+}
+
+.button_glass{
+   height:50px;
+   width:50px;
+   position:relative;
+   background:#0065FC;
+   color:#fff;
+   border:none;
+   border-radius:15px;
+}
+
+/* FILTER BUTTONS */
+
+.filter_category {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-weight: 900;
+    margin-top: 90px;  /*←ここをつけないと、フィルターが上のサーチボタンに重なる。*/
+    padding-left: 20px;
+ }
+
+.filter_category p {}
+
+.filter_category ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    margin: 20px;
+    /*フィルターボタンを全て左寄せしたいができない */
+}
+
+.flt {/*←animaux以外のフィルターボタン*/
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+
+.flt p{
+    padding-left: 40px;
+    padding-right: 0;
+}
+
+.flt2 { /*←animauxのボタン*/
+    margin-right: 30px;
+    margin-left: 30px; /*←無理矢理、下の段に改行させるため...*/
+    margin-bottom: 10px;
+}
+
+.flt2 p{
+    padding-left: 40px;
+    padding-right: 0;
+}
+
+.button_flt{
+    height:50px;
+    width:50px;
+    z-index: 2;
+    line-height: 50px;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #0065FC;
+    background-color:#DEEBFF;
+    border-radius: 50%;
+    vertical-align: bottom;
+}
+
+.economique {
+    height:48px;
+    width:120px;
+    z-index: 1;
+    line-height: 48px;
+    padding-left: 60px;
+    text-align: center;
+    display: flex;
+    position:relative;
+    left: 15px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    background:#fff;
+    font: #000000;
+    vertical-align: bottom;
+}
+
+.familial {
+    height:48px;
+    width:80px;
+    z-index: 1;
+    line-height: 48px;
+    padding-left: 70px;
+    text-align: center;
+    display: flex;
+    position:relative;
+    left: 15px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    background:#fff;
+    font: #000000;
+    vertical-align: bottom;
+ }
+
+.romantique {
+    height:48px;
+    width:100px;
+    z-index: 1;
+    line-height: 48px;
+    padding-left: 50px;
+    text-align: center;
+    display: flex;
+    position:relative;
+    left: 15px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    background:#fff;
+    font: #000000;
+    vertical-align: bottom;
+}
+
+.animaux {
+    height:48px;
+    width:160px;
+    z-index: 1;
+    line-height: 48px;
+    padding-left: 50px;
+    padding-right: 10px;
+    text-align: center;
+    display: flex;
+    position:relative;
+    left: 15px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    background:#fff;
+    font: #000000;
+    vertical-align: bottom;
+}
+
+.filter_info{
+    display: flex;
+    vertical-align: bottom;
+    text-align: bottom;
+    padding:10px;
+    margin-bottom: 30px;
+    width: 90%;
+ }
+
+.filter_info img {
+    margin-right: 10px;
+ }
+
+.filter_info p {
+    text-align: bottom; /* テキストを下に揃えたいができない...*/
+}
+
+
+
+/* POPULAR SECTION */
+
+#area_popular {
+   background: #F2F2F2;
+   height: 580px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center; /*全カードが中央揃えにならない...*/
+   text-align: center;
+   margin: 0 auto;
+}
+
+.popular_title {
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular_title h2 {
+    margin-bottom: 10px;
+}
+
+.popular_title i {
+    padding-right: 10px;
+}
+
+.popular_boxes { /* total hotel cards in polular */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*全カードが中央揃えにならない...*/
+    text-align: center;
+    margin-left: 5%;/*どうしても全カードが中央揃えにならないので、左余白をあけた*/
+
+}
+
+.popular_boxes ul { /* each hotel card in polular */
+    width: 338px;
+    height: 148px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 5px;
+}
+
+.popular_boxes li {}
+
+.po_photo {
+    width: 125px;
+    height: 135px;
+    border-radius: 15px 0 0 15px;
+    object-fit: cover;
+    padding: 5px;
+}
+
+
+.po_content {    /* content of five stars */
+   text-align: left;
+   margin: 15px;
+   line-height: 15px;
+}
+
+.po_content i{
+   color: #0065FC;
+   margin-top: 15px;
+}
+
+.po_content_fourstars { /* content of four stars */
+   text-align: left;
+   margin: 15px;
+   line-height: 15px;
+}
+
+.po_content_fourstars i{
+   color: #0065FC;
+   margin-top: 15px;
+}
+
+.po_content_fourstars i:last-child {
+   color: #F2F2F2;
+   margin-top: 15px;
+}
+
+/* MARSEILLE HOTELS SECTION */
+
+#hotels {
+   height: 1400px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center; /* 中央揃えにならない */
+   text-align: center;
+   margin-top: 10px;
+}
+
+#hotels h2 {
+    text-align: left;
+    font-size: 20px;
+    margin-left:20px;
+    margin-bottom:20px;
+}
+
+.hotel_boxes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.marseille_box{ /* each hotel card in marseille */
+    width: 335px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    margin: 5px 0 10px 20px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);
+}
+
+.marseille_box div {
+    text-align: left;
+    margin: 0 0 10px 20px;
+}
+
+.marseille_box li{
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+
+.marseille_box li strong {
+    font-size: 14px;
+}
+
+.ma_photo{
+    width: 325px;
+    height: 113px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    padding: 5px;
+}
+
+.ma_content {    /* content of five stars */
+    text-align: left;
+ }
+
+ .ma_content i{
+    color: #0065FC;
+ }
+
+ .ma_content_fourstars { /* content of four stars */
+    text-align: left;
+ }
+
+ .ma_content_fourstars i{
+    color: #0065FC;
+ }
+
+ .ma_content_fourstars i:last-child {
+    color: #F2F2F2;
+ }
+
+ .ma_content_threestars { /* content of three stars */
+    text-align: left;
+ }
+
+ .ma_content_threestars i{
+    color: #0065FC;
+ }
+
+ .ma_content_threestars i:nth-child(4) {
+    color: #F2F2F2;
+ }
+
+ .ma_content_threestars i:last-child {
+    color: #F2F2F2;
+ }
+
+
+#hotels h3{
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+/* ACTIVITY SECTION */
+
+#activities{
+    height: 1345px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+#activities h2 {
+    text-align: left;
+    margin-left: 20px;
+
+}
+
+.all_acts {　/* all activity cards */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.box_act {  /* each activity card */
+    width: 335px;
+    height: 195px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    margin: 5px 0 10px 20px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);
+}
+
+.box_act li{}
+
+.box_act li img{
+    width: 335px;
+    height: 134px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    padding: 5px;　/* ACTIVITY のカードの写真のCSSがきかない。 */
+}
+
+/* FOOTER */　
+
+footer {
+    width: 100%;
+    height: 486px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+
+}
+
+footer ul {}
+
+footer ul li {}
+
+footer ul li strong {}
+
+@media screen and (min-width: 992px) {
+
+body{
+    width: 1440px;
+}
+
+/* HEADER */
+
+header {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: center;
+    background-color: #0065FC; /**/
+}
+
+header ul {
+    width: 360px;
+    display: flex;
+    text-align: center;
+}
+
+header ul li {
+    width: 50%;
+    padding-bottom:0;
+    border-bottom: none;
+    display: block;
+}
+
+header ul li:hover, header ul li:focus {
+   border-bottom: none;
+   border-top: 3px solid #0065FC;
+   padding-bottom:none;
+   padding-bottom:40px;
+}
+
+.list_navi a:hover {
+    color: #0065FC;
+}
+
+.version_pc {
+    display: inline;
+}
+
+
+}
+
