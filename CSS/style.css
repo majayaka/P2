@@ -1,0 +1,969 @@
+@charset "UTF-8";
+
+html{
+   font-size:100%;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Raleway','Raleway 900''Raleway Bold', sans-serif;
+    font-size: 15px;
+    width: 100%;
+}
+
+p{
+    text-decoration: none;
+    color:#000;
+}
+
+a{
+    text-decoration: none;
+    color:#000;
+ }
+
+/* HEADER */
+
+header {
+    max-width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.area_logo {
+    text-align: center;
+}
+
+.area_logo img {
+    width: 100px;
+    height: 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    object-fit: cover;
+}
+
+header ul {
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+
+header ul li {
+    width: 50%;
+    list-style: none;
+    padding-bottom:20px;
+    text-align: center;
+    border-bottom: 2px solid #F2F2F2;
+    display: block;
+}
+
+header ul li:hover, header ul li:focus {
+   border-bottom: 3px solid #0065FC;
+   padding-bottom:20px;
+}
+
+.list_navi a:hover {
+    color: #0065FC;
+}
+
+.version_pc {
+    display: none;
+}
+
+/* SEARCH SECTION */
+
+.search {
+    max-width: 100%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.search_title {
+    max-width: 100%;
+    padding:30px 20px;
+}
+
+.search_title h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.search_title p {}
+
+/* SEARCH BUTTON */
+
+.search_button{
+    display: flex;
+    height: 90px;
+    max-width: 100%;
+    padding-left: 30px;
+}
+
+.button_gray {
+    height:50px;
+    width:50px;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#F2F2F2;
+    border-radius:15px 0 0 15px;
+    border: none;
+}
+
+.button_gray i:hover {
+    transform: scale(.9);
+}
+
+.search_button input[type=text] {
+    height:44px;
+    width:250px;
+    position:relative;
+    left: 50px;
+    border: 2px solid #F2F2F2;
+    background:#fff;
+    font: #000000;
+    font-family: 'Raleway Black 900';
+    font-size: large;
+    font-weight: bolder;
+}
+
+.button_rechercher{
+    display:none;
+}
+
+.button_glass{
+   height:50px;
+   width:50px;
+   position:relative;
+   background:#0065FC;
+   color:#fff;
+   border:none;
+   border-radius:15px;
+}
+
+.button_glass:hover {
+    color:#DEEBFF;
+}
+
+/* FILTER BUTTONS */
+
+.filter_category {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    font-weight: 900;
+    padding-left: 20px;
+ }
+
+.filter_category p {}
+
+.filter_category ul {
+    list-style: none;
+    display: flex;
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    margin: 20px;
+    /*フィルターボタンを全て左寄せしたいができない */
+}
+
+.flt {/* button sauf animaux */
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+
+.flt p{
+    padding-left: 40px;
+    padding-right: 0;
+}
+
+.flt2 { /* button animaux*/
+    margin-right: 30px;
+    margin-left: 0; /*←無理矢理、下の段に改行させるため...*/
+    margin-bottom: 10px;
+}
+
+.flt2 p{
+    padding-left: 40px;
+    padding-right: 0;
+}
+
+.button_flt{
+    height:50px;
+    width:50px;
+    z-index: 2;
+    line-height: 50px;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #0065FC;
+    background-color:#DEEBFF;
+    border-radius: 50%;
+    vertical-align: bottom;
+}
+
+.button_flt:hover {
+    transform: scale(.9);
+}
+
+
+.economique {
+    height:48px;
+    width:120px;
+    margin-right: 10px;
+    z-index: 1;
+    line-height: 48px;
+    padding-left: 60px;
+    text-align: center;
+    display: flex;
+    position:relative;
+    left: 15px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    background:#fff;
+    font: #000000;
+    vertical-align: bottom;
+}
+
+.familial {
+    height:48px;
+    width:80px;
+    margin-right: 10px;
+    z-index: 1;
+    line-height: 48px;
+    padding-left: 70px;
+    text-align: center;
+    display: flex;
+    position:relative;
+    left: 15px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    background:#fff;
+    font: #000000;
+    vertical-align: bottom;
+ }
+
+.romantique {
+    height:48px;
+    width:110px;
+    margin-right: 10px;
+    z-index: 1;
+    line-height: 48px;
+    padding-left: 40px;
+    padding-right:20px;
+    text-align: center;
+    display: flex;
+    position:relative;
+    left: 15px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    background:#fff;
+    font: #000000;
+    vertical-align: bottom;
+}
+
+.animaux {
+    height:48px;
+    width:170px;
+    z-index: 1;
+    line-height: 48px;
+    padding-left: 50px;
+    padding-right: 20px;
+    text-align: center;
+    display: flex;
+    position:relative;
+    left: 10px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    background:#fff;
+    font: #000000;
+    vertical-align: bottom;
+}
+
+.filter_info{
+    display: flex;
+    vertical-align: bottom;
+    text-align: bottom;
+    padding:10px;
+    margin-bottom: 30px;
+    max-width: 100%;
+ }
+
+.filter_info img {
+    margin-right: 10px;
+    vertical-align: bottom;
+ }
+
+.filter_info p {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+
+/* POPULAR SECTION */
+
+#area_popular {
+   background: #F2F2F2;
+   height: 580px;
+   max-width: 100%;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   margin: 0 auto;
+}
+
+.popular_title {
+    padding: 30px 0 10px 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular_title h2 {
+    margin-bottom: 10px;
+}
+
+.popular_title i {
+    padding-right: 10px;
+}
+
+.popular_boxes { /* total hotel cards in polular */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.popular_boxes ul { /* each hotel card in polular */
+    width: 338px;
+    height: 148px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 5px;
+}
+
+.popular_boxes li {}
+
+.po_photo {
+    width: 125px;
+    height: 135px;
+    border-radius: 15px 0 0 15px;
+    object-fit: cover;
+    padding: 5px;
+}
+
+
+.po_content {    /* content of five stars */
+   text-align: left;
+   margin: 15px;
+   line-height: 15px;
+}
+
+.po_content i{
+   color: #0065FC;
+   margin-top: 15px;
+}
+
+.po_content_fourstars { /* content of four stars */
+   text-align: left;
+   margin: 15px;
+   line-height: 15px;
+}
+
+.po_content_fourstars i{
+   color: #0065FC;
+   margin-top: 15px;
+}
+
+.po_content_fourstars i:last-child {
+   color: #F2F2F2;
+   margin-top: 15px;
+}
+
+/* MARSEILLE HOTELS SECTION */
+
+#hotels {
+   height: 1400px;
+   max-width: 767px;
+   display: flex;
+   flex-direction: column;
+   align-items:center;
+   margin-top: 10px;
+}
+
+#hotels h2 {
+    width: 100%;
+    padding: 50px 0 20px 40px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+
+.hotel_boxes{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-right: 10px;
+}
+
+.marseille_box{ /* each hotel card in marseille */
+    width: 335px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    margin: 5px 0 10px 20px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);
+}
+
+.marseille_box div {
+    text-align: left;
+    margin: 0 0 10px 20px;
+}
+
+.marseille_box li{
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+
+.marseille_box li strong {
+    font-size: 14px;
+}
+
+.ma_photo{
+    width: 325px;
+    height: 113px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    padding: 10px 5px 0 5px;
+}
+
+.ma_content {    /* content of five stars */
+    text-align: left;
+ }
+
+ .ma_content i{
+    color: #0065FC;
+ }
+
+ .ma_content_fourstars { /* content of four stars */
+    text-align: left;
+ }
+
+ .ma_content_fourstars i{
+    color: #0065FC;
+ }
+
+ .ma_content_fourstars i:last-child {
+    color: #F2F2F2;
+ }
+
+ .ma_content_threestars { /* content of three stars */
+    text-align: left;
+ }
+
+ .ma_content_threestars i{
+    color: #0065FC;
+ }
+
+ .ma_content_threestars i:nth-child(4) {
+    color: #F2F2F2;
+ }
+
+ .ma_content_threestars i:last-child {
+    color: #F2F2F2;
+ }
+
+
+#hotels h3{
+    width: 100%;
+    justify-content: flex-start;
+    padding: 20px 0 20px 60px;
+}
+
+/* ACTIVITY SECTION */
+
+#activities{
+    height: 1345px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#activities h2 {
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+
+.all_acts {　/* all activity cards */
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.all_acts ul {  /* each activity card */
+    width: 335px;
+    height: 195px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin: 5px 0 10px 20px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);
+}
+
+.all_acts ul li{
+
+}
+
+.all_acts ul li img{
+    width: 335px;
+    height: 134px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    padding: 5px;
+}
+
+.act_name {
+    width: 100%;
+    align-items: left;
+    margin: 20px 0 0 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+    max-width: 100%;
+    height: 487px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+}
+
+footer ul {
+    margin-left: 30px;
+    list-style: none;
+}
+
+footer ul li {
+    margin: 20px 0 20px 0;
+
+}
+
+footer ul li strong {}
+
+
+@media screen and (min-width:768px) and (max-width:991px)" {
+
+    body{
+        max-width: 991px;
+    }
+
+
+@media screen and (min-width: 992px) {
+
+body{
+    max-width: 1440px;
+}
+
+/* HEADER */
+
+header {
+    max-width:100%;
+    height: 115px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.area_logo img {
+    padding-top: 40px;
+    padding-left: 60px;
+}
+
+header ul {
+    width: 360px;
+    display: flex;
+
+}
+
+header ul li {
+    width: 50%;
+    padding-bottom:0;
+    padding-top: 50px;
+    border-bottom: none;
+    display: block;
+}
+
+header ul li:hover, header ul li:focus {
+   border-bottom: none;
+   border-top: 3px solid #0065FC;
+   padding-bottom:none;
+   padding-bottom:40px;
+}
+
+.list_navi a:hover {
+    color: #0065FC;
+}
+
+.version_pc {
+    display: inline;
+}
+
+.version_mo {
+    display: none;
+}
+
+/* SEARCH SECTION */
+
+.search {
+    max-width: 100%;
+    margin-left: 40px;
+}
+
+.button_glass {
+    display: none;
+}
+
+.button_rechercher {
+    display: inline;
+    height:50px;
+    width:120px;
+    position:relative;
+    font-size:14px;
+    top:0;
+    background:#0065FC;
+    color:#fff;
+    border:none;
+    border-radius:0 15px 15px 0;
+}
+
+.button_rechercher:hover{
+    color:#DEEBFF;
+    }
+
+
+/* FILTER BUTTONS */
+
+.flt2 {
+    margin-left: 10px;
+}
+
+/* hotel area */
+
+.ver_pc {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 100%;
+
+}
+
+/* MARSEILLE HOTELS SECTION */
+
+#hotels {
+    height: 628px;
+    max-width: 880px;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    margin-top: 0;
+    margin-left: 30px;
+
+ }
+
+ #hotels h2 {
+    margin-left: 30px;
+    width: 100%;
+}
+
+
+.hotel_boxes{
+   max-width: 100%;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   padding: 0;
+
+}
+
+.marseille_box{
+    width: 245px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.ma_photo{
+    width: 237px;
+    height: 113px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    padding: 5px;
+}
+
+/* POPULAR SECTION */
+
+
+#area_popular {
+    height: 628px;
+    width: 420px;
+    border-radius: 15px;
+    margin-right: 30px;
+
+}
+
+.popular_boxes ul { /* each hotel card in polular */
+    width: 342px;
+    height: 146px;
+    margin: 20px;
+}
+
+.popular_boxes ul li {
+    font-size: smaller;
+    padding-bottom: 10px;
+}
+
+.po_content i{
+    line-height: 10px;
+    margin-top: 40px;
+ }
+
+.po_content_fourstars i{
+    line-height: 10px;
+    margin-top: 40px;
+}
+
+
+/* ACTIVITY SECTION */
+
+#activities {
+    height: 500px;
+    max-width: 1340px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.all_acts {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+#activities h2 {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    align-items: flex-start;
+    text-align: left;
+
+}
+
+.all_acts ul:first-child {  /* each activity card */
+    width: 300px;
+    height: 100%;
+    background: #F2F2F2;
+    border-radius: 15px;
+    display: flex;
+    list-style: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .1);
+}
+
+ .all_acts ul:nth-child(2)  {
+    width: 300px;
+    height: 250px;
+    background: #F2F2F2;
+    border-radius: 15px;
+    display: flex;
+    list-style: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .1);
+}
+
+.all_acts ul:nth-child(3)  {
+    width: 300px;
+    height: 160px;
+    background: #F2F2F2;
+    border-radius: 15px;
+    display: flex;
+    list-style: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .1);
+}
+
+.all_acts ul:nth-child(4)  {
+    width: 300px;
+    height: 100%;
+    background: #F2F2F2;
+    border-radius: 15px;
+    display: flex;
+    list-style: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .1);
+}
+
+.all_acts ul:nth-child(4)  {
+    width: 300px;
+    height: 100%;
+    background: #F2F2F2;
+    border-radius: 15px;
+    display: flex;
+    list-style: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .1);
+}
+
+.all_acts ul:nth-child(5)  {
+    width: 300px;
+    height: 200px;
+    background: #F2F2F2;
+    border-radius: 15px;
+    display: flex;
+    list-style: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .1);
+}
+.all_acts ul:last-child {
+    width: 300px;
+    height: 200px;
+    background: #F2F2F2;
+    border-radius: 15px;
+    display: flex;
+    list-style: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .1);
+}
+
+
+/* photos of cards in activity */ /*写真が微妙にカードからズレているのですが、どう直せばいいでしょうか？*/
+
+
+
+.all_acts ul:first-child li img {
+    width: 100%;
+    height: 390px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.all_acts ul:nth-child(2) li img{
+    width: 300px;
+    height: 180px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.all_acts ul:nth-child(3) li img {
+    width: 300px;
+    height: 110px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.all_acts ul:nth-child(4) li img {
+    width: 300px;
+    height: 390px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.all_acts ul:nth-child(5) li img {
+    width: 300px;
+    height: 140px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+
+.all_acts ul:last-child li img {
+    width: 300px;
+    height: 155px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+
+.act_name {
+    margin: 0;
+}
+
+.all_acts ul li strong {
+    text-align: left;
+    margin: 50px 0 0 20px;
+    padding-top: 10px;
+    line-height: 20px;
+ }
+
+ .all_acts ul li {
+
+ }
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+}
+
+footer ul {
+    margin: 20px 70px 0 50px;
+    list-style: none;
+}
+
+footer ul li {
+    margin: 20px 0 20px 0;
+
+}
+
+footer ul li strong {}
+
+
+
+
+
