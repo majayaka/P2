@@ -821,6 +821,7 @@ header ul li:hover, header ul li:focus {
     height: 100%;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
     margin-right: 0;
     margin-left: 0;
